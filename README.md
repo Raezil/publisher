@@ -1,5 +1,3 @@
-# Go-Publisher
-
 ## Description
 
 This tool automates the process of publishing a Go library by tagging a version, pushing the tag to the remote repository, and updating the Go module proxy.
@@ -18,4 +16,9 @@ go install github.com/Raezil/publisher@latest
 
 ```bash
 publisher <version> <module-path>
+```
+
+### Example
+```bash
+publisher v1.0.0 github.com/Raezil/publisher
 ```
