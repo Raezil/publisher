@@ -9,7 +9,7 @@ import (
 func main() {
 	// Check if there are enough arguments
 	if len(os.Args) < 3 {
-		fmt.Println("Usage: go-publish <version> <module-path>")
+		fmt.Println("Usage: publisher <version> <module-path>")
 		return
 	}
 
