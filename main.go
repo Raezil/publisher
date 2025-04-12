@@ -59,7 +59,8 @@ func gitPush(version string) error {
 
 // Function to run go list to update Go proxy
 func goListModule(modulePath string) error {
-	cmd := exec.Command("GOPROXY=proxy.golang.org", "go", "list", "-m", modulePath)
+	cmd := exec.Command("go", "list", "-m", modulePath)
+	cmd.Env = append(os.Environ(), "GOPROXY=proxy.golang.org")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
